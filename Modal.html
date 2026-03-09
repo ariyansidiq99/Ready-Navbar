@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+    <main class="page-content">
+        <h1>Page Content Behind Modal</h1>
+        <button class="open-modal" onclick="document.getElementById('modal').style.display='flex'">
+            Open Modal
+        </button>
+    </main>
+    <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal">
+            <div class="modal_header">
+                <h2 class="modal_title" id="modal_title">
+                    Confirm Action
+                </h2>
+                <button class="modal_close" onclick="document.getElementById('modal').style.display='none'" aria-labelledby="close modal">&times;</button>
+            </div>
+            <div class="modal_body">
+                <p>Are you sure you want to proceed? this can not be undone</p>
+            </div>
+            <div class="modal_footer">
+                <button class="btn btn--ghost" onclick="document.getElementById('modal').style.display='none'">Cancel
+                </button>
+                <button class="btn btn--danger">Confirm delete</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
